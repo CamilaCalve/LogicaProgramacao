@@ -6,6 +6,7 @@ body {
 
 .receita-detalhe {
     max-width: 40vw;
+    display: grid;
     margin: 30px auto;
     border: 1px solid rgba(0, 0, 0, 0.143);
     padding: 20px;
