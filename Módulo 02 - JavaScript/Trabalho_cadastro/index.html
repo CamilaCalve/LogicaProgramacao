@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Alunos</title>
+    <style>
+
+        * {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .container {
+            padding: 20px;
+        }   
+
+        label {
+            font-size: 18px;
+        }
+
+        input {
+            padding: 8px;
+        }
+
+        button{
+            padding: 8px;
+            margin-left: 10px;
+            background-color: #B0C4DE;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover{
+            background-color: #9aaaba;
+        }
+
+        h2{
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        .corAprovado {
+            color: green;
+        }
+
+        .corReprovado {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cadastro de Alunos</h1>
+        <label for="">Nome: </label>
+        <input type="text" id="nome" placeholder="Digite o nome do aluno(a)">
+        <label for="">Nota: </label>
+        <input type="number" id="nota" placeholder="Digite a nota do aluno(a)">
+
+        <button onclick="Cadastrar()">Cadastrar</button>
+        <button onclick="MostrarTodos()">Mostrar todos os Alunos</button>
+        <button onclick="MostrarAprovados()">Mostrar ALunos Aprovados</button>
+        <button onclick="MostrarReprovados()">Mostrar ALunos Reprovados</button>
+
+        <div id="lista">
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
