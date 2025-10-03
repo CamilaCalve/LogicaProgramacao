@@ -5,8 +5,8 @@ const cep =document.getElementById("cep")
 cep.addEventListener("change", (evento) => {
     let cepUsuario = evento.target 
     buscaCep(cepUsuario.value)
-    
-})
+
+})  // Quando o usuário terminar de digitar o CEP e sair do campo, pegue o valor que ele digitou e chame a função buscaCep com esse valor.
 
 async function buscaCep(cepUsuario){ 
 
@@ -22,7 +22,7 @@ async function buscaCep(cepUsuario){
             throw Error ("CEP INEXISTENTE!!")
         }
 
-        preencheCampos(consultaCEPJson)
+        preencheCampos(consultaCEPJson)  // função "preencheCampos" pega os dados do JSON e coloca nos inputs de rua, bairro, cidade e estado.
     }
     catch {
         erroCep.innerHTML = "CEP INVÁLIDO, TENTE NOVAMENTE!!"
