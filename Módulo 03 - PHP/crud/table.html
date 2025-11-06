@@ -1,26 +1,24 @@
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Sbrenome</th>
-            <th>E-mail</th>
-            <th>Excluir</th>
+<form action='processaNota.php' method='post' id='form-nota'>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Nota Atividade</th>
+                <th>Nota Prova</th>
             </tr>
-    </thead>
+        </thead>
+        <tbody>
 
-    <tbody>
-        <tr>
-            <td>$row ['id']</td>
-            <td>$row ['nome']</td>
-            <td>$row ['sobrenome']</td>
-            <td>$row ['email']</td>
-            <td>
-                <form action='excluirCadastro.php' method='post'>
-                    <input type='hidden' name='id' value='$row ['id']'>
-                    <input type='submit' id='btn-excluir' value='&#x1f5d1'>
-                </form>
-            </td>
-        </tr>
-    </tbody>
-</table>
+            <tr>
+                <td>{$row['id']}</td>
+                <td>{$row['nome']}</td>
+                <td>{$row['sobrenome']}</td>
+                <td><input type='number' name='nota_atividade[{$row['id']}]' required></td>
+                <td><input type='number' name='nota_prova[{$row['id']}]' required></td>
+            </tr>
+
+        </tbody>
+    </table>
+</form>
