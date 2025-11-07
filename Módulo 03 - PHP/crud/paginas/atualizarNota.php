@@ -89,7 +89,7 @@
 
                                         echo "</tbody>
                                             </table>
-                                            <input type='sumit' value='Enviar'>
+                                            <input type='submit' value='Enviar'>
                                         </form>";
 
                         } else {
